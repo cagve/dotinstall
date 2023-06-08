@@ -10,4 +10,4 @@ test:
 neovim: 
 	echo "This is neovim"
 	$(INSTALL) neovim
-	cp -r ./nvim/ ~/.config/
+	cp -r ./nvim ~/.config/

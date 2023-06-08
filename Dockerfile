@@ -5,6 +5,7 @@ RUN apt-get update -y
 RUN apt-get upgrade -y 
 
 RUN apt-get install curl -y
+RUN apt-get install sudo -y
 RUN apt-get install git -y
 RUN apt-get install make -y
 RUN apt-get install vim -y 
