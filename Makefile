@@ -7,10 +7,14 @@ prerequisites:
 test: 
 	echo "This is my makefile test file."
 	
-neovim: neovim-default neovim-packer neovim-dotfiles
 
-neovim-pre:
+neovim: pre neovim-default neovim-packer neovim-dotfiles
+
+pre:
+	echo "Neovim prerequisites"
 	${INSTALL} ninja-build gettext cmake unzip curl
+	echo "LaTeX prerequisites"
+	${INSTALL} vimtex zathura
 
 neovim-default:
 	git clone https://github.com/neovim/neovim
