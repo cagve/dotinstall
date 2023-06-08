@@ -11,7 +11,7 @@ RUN apt-get install make -y
 RUN apt-get install vim -y 
 
 # setup working directory
-RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1001 ubuntu
+RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1001 ubuntu -p 1234
 USER ubuntu
 WORKDIR /home/ubuntu
 

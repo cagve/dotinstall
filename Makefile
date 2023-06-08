@@ -1,4 +1,4 @@
-INSTALL		:= apt-get install 
+INSTALL		:= sudo apt-get install 
 
 all: test neovim
 
