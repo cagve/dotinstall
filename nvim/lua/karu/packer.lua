@@ -1,7 +1,7 @@
 --vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
+	use ('wbthomason/packer.nvim', { run = ':PackerSync' })
 
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use 'nvim-treesitter/playground'
