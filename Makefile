@@ -10,10 +10,9 @@ test:
 neovim: neovim-default neovim-packer
 
 neovim-default:
-	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-	chmod u+x nvim.appimage
-	mkdir -p ~/.local/bin/
-	mv nvim.appimage ~/.local/bin/nvim
+	git clone https://github.com/neovim/neovim
+	cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+	sudo make install
 
 neovim-packer:
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
