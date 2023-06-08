@@ -12,7 +12,7 @@ neovim: neovim-default neovim-packer
 neovim-default:
 	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 	chmod u+x nvim.appimage
-	mkdir ~/.local/bin/
+	mkdir -p ~/.local/bin/
 	mv nvim.appimage ~/.local/bin
 
 neovim-packer:
