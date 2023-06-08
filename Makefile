@@ -22,4 +22,4 @@ neovim-packer:
 
 neovim-dotfiles:
 	mkdir -p ~/.config/nvim
-	cp -r ./nvim/ ~/.config/nvim
+	cp -r ./nvim/* ~/.config/nvim/*
