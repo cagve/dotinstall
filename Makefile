@@ -9,6 +9,9 @@ test:
 	
 neovim: neovim-default neovim-packer
 
+neovim-pre:
+	${INSTALL} ninja-build gettext cmake unzip curl
+
 neovim-default:
 	git clone https://github.com/neovim/neovim
 	cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
