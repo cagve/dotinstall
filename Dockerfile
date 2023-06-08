@@ -14,4 +14,4 @@ RUN useradd -ms /bin/bash tester
 USER tester
 WORKDIR /home/tester
 
-
+RUN git clone https://github.com/cagve/dotinstall
