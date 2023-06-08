@@ -17,4 +17,5 @@ USER ubuntu
 WORKDIR /home/ubuntu
 
 
+RUN echo 'export PATH=$PATH:~/.local/bin/' > .bashrc
 RUN git clone https://github.com/cagve/dotinstall
