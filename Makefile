@@ -14,7 +14,7 @@ pre:
 	echo "Neovim prerequisites"
 	${INSTALL} ninja-build gettext cmake unzip curl
 	echo "LaTeX prerequisites"
-	${INSTALL} vimtex zathura
+	# ${INSTALL} vimtex zathura
 
 neovim-default:
 	git clone https://github.com/neovim/neovim
@@ -30,4 +30,4 @@ neovim-dotfiles:
 
 lsp-lua:
 	cd .. && git clone https://github.com/LuaLS/lua-language-server
-	cd lua-language-server && ./make.sh
+	cd ../lua-language-server && ./make.sh
