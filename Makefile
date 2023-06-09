@@ -24,10 +24,6 @@ neovim-default:
 neovim-packer:
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-neovim-dotfiles:
-	mkdir -p ~/.config/nvim 
-	cp -r ./dotfiles/nvim/* ~/.config/nvim/
-
 latex:
 	$(info ************  Installing LaTeX ************)
 	${INSTALL} texlive-full zathura
@@ -38,8 +34,10 @@ dotfiles:
 	mkdir ~/scripts/ 
 	cp -r ./dotfiles/scripts/* ~/scripts/
 	echo "export PATH=\$PATH:~/.bashrc"  >> ~/.bashrc
-
 	$(info ************  Installing TMUX ************)
 	${INSTALL} tmux
 	gem install tmuxinator
 	cp ./dotfiles/.tmux.conf ~/.tmux.conf
+	$(info ************  Installing Neovim ************)
+	mkdir -p ~/.config/nvim 
+	cp -r ./dotfiles/nvim/* ~/.config/nvim/
