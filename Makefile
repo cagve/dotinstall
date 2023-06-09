@@ -33,7 +33,7 @@ dot:
 	$(info ************  Installing SCRIPTS ************)
 	mkdir ~/scripts/ 
 	cp -r ./dotfiles/scripts/* ~/scripts/
-	echo "export PATH=$PATH:~/.bashrc"  >> ~/.bashrc
+	cp ./dotfiles/bashrc ~/.bashrc
 	$(info ************  Installing TMUX ************)
 	${INSTALL} tmux
 	sudo gem install tmuxinator
