@@ -29,5 +29,5 @@ neovim-dotfiles:
 	cp -r ./nvim/* ~/.config/nvim/
 
 lsp-lua:
-	cd .. && git clone https://github.com/LuaLS/lua-language-server
-	cd ../lua-language-server && ./make.sh
+	git clone https://github.com/LuaLS/lua-language-server
+	./make.sh
