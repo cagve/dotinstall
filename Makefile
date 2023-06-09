@@ -33,7 +33,7 @@ dot:
 	$(info ************  Installing SCRIPTS ************)
 	mkdir ~/scripts/ 
 	cp -r ./dotfiles/scripts/* ~/scripts/
-	cp ./dotfiles/bashrc ~/.bashrc
+	cp ./dotfiles/.bashrc ~/.bashrc
 	$(info ************  Installing TMUX ************)
 	${INSTALL} tmux
 	sudo gem install tmuxinator
