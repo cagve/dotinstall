@@ -29,14 +29,14 @@ latex:
 	${INSTALL} texlive-full zathura
 	cargo install texlab
 
-dotfiles:
+dot:
 	$(info ************  Installing SCRIPTS ************)
 	mkdir ~/scripts/ 
 	cp -r ./dotfiles/scripts/* ~/scripts/
-	echo "export PATH=\$PATH:~/.bashrc"  >> ~/.bashrc
+	echo "export PATH=$PATH:~/.bashrc"  >> ~/.bashrc
 	$(info ************  Installing TMUX ************)
 	${INSTALL} tmux
-	gem install tmuxinator
+	sudo gem install tmuxinator
 	cp ./dotfiles/.tmux.conf ~/.tmux.conf
 	$(info ************  Installing Neovim ************)
 	mkdir -p ~/.config/nvim 
