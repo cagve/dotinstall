@@ -28,13 +28,18 @@ neovim-dotfiles:
 	mkdir -p ~/.config/nvim 
 	cp -r ./dotfiles/nvim/* ~/.config/nvim/
 
-lsp-lua:
-	git clone https://github.com/LuaLS/lua-language-server
-	./make.sh
-
 latex:
+	$(info ************  Installing LaTeX ************)
 	${INSTALL} texlive-full zathura
+	cargo install texlab
 
 dotfiles:
+	$(info ************  Installing SCRIPTS ************)
 	mkdir ~/scripts/ 
+	cp -r ./dotfiles/scripts/* ~/scripts/
 	echo "export PATH=\$PATH:~/.bashrc"  >> ~/.bashrc
+
+	$(info ************  Installing TMUX ************)
+	${INSTALL} tmux
+	gem install tmuxinator
+	cp ./dotfiles/.tmux.conf ~/.tmux.conf
