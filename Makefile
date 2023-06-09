@@ -26,7 +26,7 @@ neovim-packer:
 
 neovim-dotfiles:
 	mkdir -p ~/.config/nvim 
-	cp -r ./nvim/* ~/.config/nvim/
+	cp -r ./dotfiles/nvim/* ~/.config/nvim/
 
 lsp-lua:
 	git clone https://github.com/LuaLS/lua-language-server
@@ -34,3 +34,7 @@ lsp-lua:
 
 latex:
 	${INSTALL} texlive-full zathura
+
+dotfiles:
+	mkdir ~/scripts/ 
+	echo "export PATH=\$PATH:~/.bashrc"  >> ~/.bashrc

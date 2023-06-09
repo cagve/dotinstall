@@ -1,0 +1,7 @@
+hola
+adios
+adios
+adios
+adios
+export PATH=/home/karu/.cargo/bin:/home/karu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/karu/.oh-my-zsh/custom/plugins/fzf-zsh-plugin/bin:/home/karu/.fzf/bin:/home/karu/scripts:/usr/lib/jvm/jdk-14/bin:/home/karu/.local/bin:/home/karu/.cargo/bin:/home/karu/.local/lsp/lua-language-server/bin/:/home/karu/.oh-my-zsh/custom/plugins/fzf-zsh-plugin/bin:/home/karu/scripts:/usr/lib/jvm/jdk-14/bin:/home/karu/.local/bin:/home/karu/.cargo/bin:/home/karu/.local/lsp/lua-language-server/bin/:~/.bashrc
+export PATH=$PATH:~/.bashrc
