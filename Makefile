@@ -31,3 +31,6 @@ neovim-dotfiles:
 lsp-lua:
 	git clone https://github.com/LuaLS/lua-language-server
 	./make.sh
+
+latex:
+	${INSTALL} texlive-full zathura
