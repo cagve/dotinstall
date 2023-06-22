@@ -15,6 +15,7 @@ vim.keymap.set('v', 'J'," :m '>+1<CR>gv=gv",opts)
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
 vim.keymap.set('v', '<C-r>', "hy:%s/<C-r>h//gc<left><left><left>", opts)
 vim.keymap.set('n', '<leader>pp', ":e ~/Phd/Database/Notes/index.md<CR>", opts)
+vim.keymap.set('n', '<C-t>', ":TagbarToggle<CR>", opts)
 
 
 
@@ -47,3 +48,8 @@ vim.keymap.set('n', "<C-Space>", require('nvim-tmux-navigation').NvimTmuxNavigat
 
 
 vim.keymap.set('n', "<leader>gg",  ':LazyGit<CR>', opts)
+
+-- markdown
+vim.keymap.set('n','<leader>ww', ":e "..vim.api.nvim_get_var('notespath').."/index.md<CR>") -- I should make a variable
+vim.keymap.set('n','<leader>wn', require('karu.writers').create_note)
+vim.keymap.set('n','<leader>wi', require('karu.writers').create_index)

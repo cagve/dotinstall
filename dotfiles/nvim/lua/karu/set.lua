@@ -18,3 +18,23 @@ vim.cmd("filetype plugin on")
 vim.cmd("syntax on")
 vim.cmd("set rtp+=~/texbox")
 
+
+-- VARS
+vim.api.nvim_set_var("notespath", home.."/Cloud/Notes")
+
+-- WRITTER SETUP
+local writersGroupSettings = function()
+    vim.opt.spelllang="en"
+    vim.opt.spell=true
+    vim.opt.wrap=true							-- Avoid show 1 long line--
+    vim.opt.linebreak=true                      -- Prevents words from breaking over line
+    vim.opt.breakindent=true                    -- Indent wrapped lines
+    vim.opt.encoding='UTF-8'                    -- The encoding displayed 
+    vim.opt.fileencoding='utf-8'                -- The encoding written to file
+    vim.opt.conceallevel=2                      -- So that I can see `` in markdown files
+    vim.opt.cursorline=true                     -- Enable highlighting of the current line
+    vim.keymap.set('i', '<C-u>', '<c-g>u<Esc>[s1z=`]a<c-g>u', {}) -- Corrige
+end
+
+local writers = vim.api.nvim_create_augroup("writerGroups", {clear = true})
+vim.api.nvim_create_autocmd("BufEnter", {pattern = {"*.eml","*.tex", "*.md"}, callback = writersGroupSettings , group = writers})

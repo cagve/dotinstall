@@ -9,10 +9,16 @@ return require('packer').startup(function(use)
 	use 'ThePrimeagen/harpoon'
 	use 'nvim-lualine/lualine.nvim'
 	use  "alexghergh/nvim-tmux-navigation"
+	use  'nvim-tree/nvim-web-devicons'
+
 
 
 	-- TELESCOPE
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
+	use 'nvim-telescope/telescope-symbols.nvim'
+
+	-- LaTeX 
+	use 'lervag/vimtex'
 
 	-- LSP
 	use { 'neovim/nvim-lspconfig' }
@@ -28,8 +34,12 @@ return require('packer').startup(function(use)
 	-- Snippets
 	use { 'L3MON4D3/LuaSnip' }
 
-	use { 'numToStr/Comment.nvim' }
+	use { 'numToStr/Comment.nvim',    config = function()
+        require('Comment').setup()
+    end }
 	use 'tpope/vim-surround'
-	use 'tpope/vim-fugitive'
-	use { 'windwp/nvim-autopairs' }
+	use "kdheepak/lazygit.nvim"
+	use "windwp/nvim-autopairs"
+	use 'mhartington/oceanic-next'
+	use 'preservim/tagbar' 
 end)

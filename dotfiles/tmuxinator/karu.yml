@@ -1,0 +1,6 @@
+# ~/.tmuxinator/karu.yml
+name: karu
+root: ~/
+  
+windows:
+  - shell:

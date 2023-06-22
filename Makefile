@@ -8,13 +8,15 @@ test:
 	echo "This is my makefile test file."
 	
 
-neovim: pre neovim-default neovim-packer neovim-dotfiles
+neovim: pre neovim-default neovim-packer 
 
 pre:
-	echo "Neovim prerequisites"
 	${INSTALL} ninja-build gettext cmake unzip curl
-	echo "LaTeX prerequisites"
-	# ${INSTALL} vimtex zathura
+	${INSTALL} gem ruby npm
+	${INSTALL} feh rofi fzf
+
+neovim-plugins:
+	# LAZYGIT
 
 neovim-default:
 	git clone https://github.com/neovim/neovim
@@ -28,6 +30,7 @@ latex:
 	$(info ************  Installing LaTeX ************)
 	${INSTALL} texlive-full zathura
 	cargo install texlab
+	npm i -g grammarly-languageserver
 
 dot:
 	$(info ************  Installing SCRIPTS ************)

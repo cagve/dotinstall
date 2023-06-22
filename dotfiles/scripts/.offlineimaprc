@@ -1,2 +1,0 @@
-[Account myaccount]
-postsynchook = ~/scripts/notmuch-hook.sh

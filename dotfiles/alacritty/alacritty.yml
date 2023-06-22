@@ -1,0 +1,21 @@
+font:
+  normal:
+    family: JuliaMono
+    style: Regular
+
+  bold:
+    family: JuliaMono
+    style: Bold
+
+  italic:
+    family: JuliaMono
+    style: Italic
+
+  bold_italic:
+    family: JuliaMono
+    style: Bold Italic
+  size: 13
+
+
+import:
+  - ~/.config/alacritty/themes/hyper.yaml

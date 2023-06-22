@@ -136,3 +136,11 @@ vim.keymap.set('n', '<leader>mm', math_symbols, {})
 vim.keymap.set('n', '<leader>ab', mail_adress, {})
 vim.keymap.set('n', '<leader>ph', phd_dirs, {})
 
+require('telescope').setup{ 
+  defaults = { 
+    file_ignore_patterns = { 
+      "undodir" 
+    }
+  }
+}
+

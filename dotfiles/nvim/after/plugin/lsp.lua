@@ -54,10 +54,18 @@ require'lspconfig'.tsserver.setup {
 	capabilities = capabilities
 }
 
-require'lspconfig'.grammarly.setup{
-	filetypes = {"tex"},
+--require'lspconfig'.grammarly.setup{
+--	filetypes = {"tex"},
+--	on_attach = on_attach,
+--	capabilities = capabilities
+--}
+--
+
+require'lspconfig'.ltex.setup{
 	on_attach = on_attach,
-	capabilities = capabilities
+	capabilities = capabilities,
+	cmd = {"/home/caguiler/.local/share/ltex-ls-16.0.0/bin/ltex-ls"},
+	filetypes = { "mail","bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex", "pandoc"}
 }
 
 require'lspconfig'.jdtls.setup{
