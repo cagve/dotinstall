@@ -1,0 +1,10 @@
+#!/bin/bash
+
+status () { 
+	echo -n "    $(date '+%Y-%m-%d %H:%M')   "
+}
+
+while :; do
+	xsetroot -name "$(status)"
+	sleep 1
+done

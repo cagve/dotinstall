@@ -1,0 +1,7 @@
+#!/bin/bash
+DIR=$HOME/Phd
+SESSION=$(find $DIR -type d -print | fzf)
+
+if [[ $SESSION != "" ]]; then
+	tmux neww -c $SESSION -n $(basename $SESSION)
+fi

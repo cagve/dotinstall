@@ -1,0 +1,22 @@
+#!/bin/bash
+# Description:
+# This script uses a pandoc filter to read the clipboard and convert it to latex or unicode depends on the entry
+# Now Unicode -> latex not working because incompatibilty version
+# https://github.com/marhop/pandoc-unicode-math
+
+CLIPBOARD=$(xclip -o)
+
+CHAR=$(printf %.1s "$CLIPBOARD")
+
+if [ $CHAR == '\' ];then
+	UNICODE=$(echo "\$$CLIPBOARD\$" | pandoc -t plain)
+	echo $UNICODE | xclip -selection clipboard
+	notify-send "$UNICODE to the clipboard"
+else
+	LATEX=$(echo "$CLIPBOARD" | pandoc --filter pandoc-unicode-math -t plain)
+	echo $LATEX | xclip -selection clipboard
+	notify-send "$LATEX to the clipboard"
+fi
+
+
+
