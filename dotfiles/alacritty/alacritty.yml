@@ -14,7 +14,7 @@ font:
   bold_italic:
     family: JuliaMono
     style: Bold Italic
-  size: 13
+  size: 11
 
 
 import:
