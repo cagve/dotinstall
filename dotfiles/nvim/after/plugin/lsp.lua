@@ -64,7 +64,7 @@ require'lspconfig'.tsserver.setup {
 require'lspconfig'.ltex.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
-	cmd = {"/home/caguiler/.local/share/ltex-ls-16.0.0/bin/ltex-ls"},
+	autostart = false,
 	filetypes = { "mail","bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex", "pandoc"}
 }
 

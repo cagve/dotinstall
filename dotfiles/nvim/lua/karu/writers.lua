@@ -28,15 +28,24 @@ end
 -- Duplicate function in ftplugin/tex.lua
 M.toggle_ltex_ls = function ()
 	local client = vim.lsp.get_active_clients({bufnr=0, name="ltex"})
-	local global_client = vim.lsp.get_active_clients({name="ltex"})
-	local id = global_client[1]["id"]
-	if next(client) == nil then
-		vim.lsp.buf_attach_client(0,id)
-		print("Attached")
+	local count = 0
+	for _ in pairs(client) do count = count + 1 end
+	print(count)
+	if count == 0 then
+		local ltex = require('lspconfig')["ltex"]
+		ltex.launch()
+		print("Starting server ltex, please wait.")
+
 	else
-		print("YES")
-		vim.lsp.buf_detach_client(0,id)
-		print("Detached")
+		local global_client = vim.lsp.get_active_clients({name="ltex"})
+		local id = global_client[1]["id"]
+		if next(client) == nil then
+			vim.lsp.buf_attach_client(0,id)
+			print("Attached")
+		else
+			vim.lsp.buf_detach_client(0,id)
+			print("Detached")
+	   end
    end
 end
 
