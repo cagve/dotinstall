@@ -17,6 +17,7 @@ vim.opt.termguicolors=true
 vim.cmd("filetype plugin on")
 vim.cmd("syntax on")
 vim.cmd("set rtp+=~/texbox")
+vim.cmd("colorscheme default_tex")
 
 
 -- VARS

@@ -26,4 +26,5 @@ highlight link texMathDelimZoneTI texEnvArgName
 " highlight link texMathOper texMathSymbol
 hi clear Conceal
 hi Conceal guifg=#60ff60 guibg=NONE
+hi CursorLine guibg=#202020 gui=bold
 
