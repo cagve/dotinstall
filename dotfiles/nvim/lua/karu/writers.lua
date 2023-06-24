@@ -115,5 +115,13 @@ M.create_link = function ()
 	vim.api.nvim_input('a')
 end
 
+M.next_link = function() 
+	vim.cmd(':let @/="["')
+	vim.api.nvim_input('n')
+end
 
+M.prev_link = function() 
+	vim.cmd(':let @/="["')
+	vim.api.nvim_input('N')
+end
 return M

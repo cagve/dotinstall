@@ -4,6 +4,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 
 vim.keymap.set('n', '=', wr.increase_header)
+vim.keymap.set('n', '<tab>', wr.next_link)
+vim.keymap.set('n', '<S-tab>', wr.prev_link)
 vim.keymap.set('n', '+', wr.decrease_header)
 vim.keymap.set('n','<localleader>tl', wr.toggle_ltex_ls)
 vim.keymap.set('v', '<C-space>', wr.create_link)
