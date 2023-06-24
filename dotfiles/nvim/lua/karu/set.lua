@@ -39,3 +39,6 @@ end
 
 local writers = vim.api.nvim_create_augroup("writerGroups", {clear = true})
 vim.api.nvim_create_autocmd("BufEnter", {pattern = {"*.eml","*.tex", "*.md"}, callback = writersGroupSettings , group = writers})
+
+
+
