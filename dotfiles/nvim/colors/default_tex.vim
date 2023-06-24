@@ -27,4 +27,6 @@ highlight link texMathDelimZoneTI texEnvArgName
 hi clear Conceal
 hi Conceal guifg=#60ff60 guibg=NONE
 hi CursorLine guibg=#202020 gui=bold
+highlight Pmenu guibg=#202020 
+
 
