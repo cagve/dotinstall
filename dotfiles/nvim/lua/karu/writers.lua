@@ -81,6 +81,14 @@ M.create_index = function ()
 		end
 	end
 
+	
+	-- Remove index.md
+	for i, v in ipairs(t) do
+		if string.find(v,"index.md") then
+			table.remove(t, i)
+		end
+	end
+
 	print(count.." new entrie/s added.")
 	for _,v in ipairs(t) do
 		table.insert(lines, v)
