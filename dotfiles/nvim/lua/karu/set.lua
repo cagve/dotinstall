@@ -18,10 +18,11 @@ vim.cmd("filetype plugin on")
 vim.cmd("syntax on")
 vim.cmd("set rtp+=~/texbox")
 vim.cmd("colorscheme default_tex")
+vim.opt.foldenable=false
 
 
 -- VARS
-vim.api.nvim_set_var("notespath", home.."/Cloud/Notes")
+vim.api.nvim_set_var("notespath", home.."/Notes")
 
 -- WRITTER SETUP
 local writersGroupSettings = function()
@@ -39,6 +40,7 @@ end
 
 local writers = vim.api.nvim_create_augroup("writerGroups", {clear = true})
 vim.api.nvim_create_autocmd("BufEnter", {pattern = {"*.eml","*.tex", "*.md"}, callback = writersGroupSettings , group = writers})
+
 
 
 

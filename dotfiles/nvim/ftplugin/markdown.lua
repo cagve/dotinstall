@@ -11,3 +11,8 @@ vim.keymap.set('n','<localleader>tl', wr.toggle_ltex_ls)
 vim.keymap.set('v', '<C-space>', wr.create_link)
 vim.keymap.set('n', '<C-space>', 'ciw[]<esc>Pf]a()<esc>i')
 
+-- PLUGIN VIM-MARKDOWN
+vim.api.nvim_set_var("vim_markdown_folding_disabled" , 1)
+vim.api.nvim_set_var("tex_conceal" , 'abdmgs')
+vim.api.nvim_set_var("vim_markdown_conceal" , 2)
+vim.api.nvim_set_var("vim_markdown_math" , 1)

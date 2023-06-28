@@ -42,4 +42,8 @@ return require('packer').startup(function(use)
 	use "windwp/nvim-autopairs"
 	use 'mhartington/oceanic-next'
 	use 'preservim/tagbar' 
+
+	use 'preservim/vim-markdown'
+	
 end)
+

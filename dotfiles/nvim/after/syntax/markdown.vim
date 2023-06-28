@@ -182,5 +182,6 @@ HtmlHiLink mkdDelimiter        Delimiter
 
 let b:current_syntax = 'mkd'
 
+
 delcommand HtmlHiLink
 " vim: ts=8

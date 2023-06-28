@@ -9,7 +9,8 @@ local t = ls.text_node
 
 local snippet = {
 	s({trig="bf", name="Bold font"}, {t"**", i(1), t"**"}),
-	s({trig="link", name="Link"}, {t"[", i(2), t"]",t"(", i(1), t")"}),
+	s({trig="ll", name="Link"}, {t"[", i(2), t"]",t"(", i(1), t")"}),
+	s({trig="im", name="Inline math mode"}, fmt("$ {} $ {}", {i(1), i(2)})),
 	s({trig="preamble"}, fmt( [[
 		--- 
 		title: {}
