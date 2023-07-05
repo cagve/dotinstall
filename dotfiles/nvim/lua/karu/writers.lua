@@ -53,7 +53,7 @@ M.create_note = function ()
 	local filename = vim.fn.input("Note title >> ")
 	local note_path = vim.api.nvim_get_var('notespath')
 	filename = filename:gsub(" ", "_")
-	vim.cmd('e '..note_path.."/"..filename..".md")
+	vim.cmd('e '..note_path.."/inbox/"..filename..".md")
 end
 
 M.create_index = function ()

@@ -1,6 +1,6 @@
 # ~/.tmuxinator/Phd.yml
-name: Phd
-root: ~/Phd
+name: Notes
+root: ~/Notes
   
 windows:
   - shell:
